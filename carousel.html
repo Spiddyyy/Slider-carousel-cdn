@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Image Carousel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/your-username/your-repo@latest/carousel.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel" id="carousel"></div>
+        <button class="nav-button prev">❮</button>
+        <button class="nav-button next">❯</button>
+    </div>
+
+    <script>
+        // Configuration: Customize these values
+        const carouselConfig = {
+            width: '600px', // Carousel width
+            height: '400px', // Carousel height
+            autoplayInterval: 2000, // Time per slide in milliseconds
+            transitionSpeed: '0.5s', // Transition duration
+            buttonBg: 'rgba(0, 0, 0, 0.5)', // Button background
+            buttonColor: 'white', // Button text/icon color
+            images: [
+                { src: 'https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1', alt: 'Image 1' },
+                { src: 'https://via.placeholder.com/600x400/00FF00/FFFFFF?text=Image+2', alt: 'Image 2' },
+                { src: 'https://via.placeholder.com/600x400/0000FF/FFFFFF?text=Image+3', alt: 'Image 3' }
+            ]
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/your-username/your-repo@latest/carousel.js"></script>
+</body>
+</html>
