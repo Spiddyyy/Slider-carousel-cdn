@@ -28,7 +28,7 @@ This repository provides a lightweight, customizable, and continuous-loop image 
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Slider Carousel</title>
        <!-- CDN CSS -->
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chethangowda001/Slider-carousel-cdn@latest/carousel.min.css">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/carousel.min.css">
    </head>
    <body>
        <div class="carousel-container">
@@ -54,6 +54,6 @@ This repository provides a lightweight, customizable, and continuous-loop image 
            };
        </script>
        <!-- CDN JavaScript -->
-       <script src="https://cdn.jsdelivr.net/gh/chethangowda001/Slider-carousel-cdn@latest/carousel.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/carousel.min.js"></script>
    </body>
    </html>
