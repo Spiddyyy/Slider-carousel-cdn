@@ -32,12 +32,12 @@ This repository provides a lightweight, customizable, and continuous-loop image 
    </head>
    <body>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.css">
-<div class="spiddyyy-carousel-container">
+    <div class="spiddyyy-carousel-container">
     <div class="spiddyyy-carousel" id="spiddyyy-carousel"></div>
     <button class="spiddyyy-nav-button spiddyyy-prev">❮</button>
     <button class="spiddyyy-nav-button spiddyyy-next">❯</button>
-</div>
-<script>
+    </div>
+   <script>
     const carouselConfig = {
         width: '600px',
         height: '400px',
@@ -50,7 +50,7 @@ This repository provides a lightweight, customizable, and continuous-loop image 
             { content: '<div class="spiddyyy-custom-content my-custom-class"><h2>Custom Slide</h2><p>User-styled content.</p></div>' }
         ]
     };
-</script>
-<script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"></script>
+      </script>
+    <script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"></script>
    </body>
    </html>
