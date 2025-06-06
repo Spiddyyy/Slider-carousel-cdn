@@ -31,28 +31,26 @@ This repository provides a lightweight, customizable, and continuous-loop image 
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/carousel.min.css">
    </head>
    <body>
-       <div class="carousel-container">
-           <div class="carousel" id="carousel"></div>
-           <button class="nav-button prev">❮</button>
-           <button class="nav-button next">❯</button>
-       </div>
-
-       <!-- Configuration -->
-      const carouselConfig = {
-            width: '600px',
-            height: '400px',
-            autoplayInterval: 2000,
-            transitionSpeed: '0.5s',
-            buttonBg: 'rgba(0, 0, 0, 0.5)',
-            buttonColor: 'white',
-            slides: [
-                { content: '<img src="https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1" alt="Image 1" style="width:100%;height:100%;object-fit:cover;">' },
-                { content: '<div class="spiddyyy-custom-content user-slide"><h2>Slide 2</h2><p>This is a custom HTML slide with a user-defined class.</p></div>' },
-                { content: '<img src="https://via.placeholder.com/600x400/00FF00/FFFFFF?text=Image+3" alt="Image 3" style="width:100%;height:100%;object-fit:cover;">' },
-                { content: '<div class="spiddyyy-custom-content user-slide"><h2>Slide 4</h2><p>Another custom HTML slide with flexible content.</p></div>' }
-            ]
-        };
-       <!-- CDN JavaScript -->
-       <script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.css">
+<div class="spiddyyy-carousel-container">
+    <div class="spiddyyy-carousel" id="spiddyyy-carousel"></div>
+    <button class="spiddyyy-nav-button spiddyyy-prev">❮</button>
+    <button class="spiddyyy-nav-button spiddyyy-next">❯</button>
+</div>
+<script>
+    const carouselConfig = {
+        width: '600px',
+        height: '400px',
+        autoplayInterval: 2000,
+        transitionSpeed: '0.5s',
+        buttonBg: 'rgba(0, 0, 0, 0.5)',
+        buttonColor: 'white',
+        slides: [
+            { content: '<img src="https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1" alt="Image 1" style="width:100%;height:100%;object-fit:cover;">' },
+            { content: '<div class="spiddyyy-custom-content my-custom-class"><h2>Custom Slide</h2><p>User-styled content.</p></div>' }
+        ]
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"></script>
    </body>
    </html>
