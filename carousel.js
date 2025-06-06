@@ -14,21 +14,21 @@
             }
 
             const config = window.carouselConfig;
-            const carouselContainer = document.querySelector('.carousel-container');
+            const carouselContainer = document.querySelector('.spiddyyy-carousel-container');
             if (!carouselContainer) {
-                console.error('Carousel container not found.');
+                console.error('Spiddyyy carousel container not found.');
                 return;
             }
 
-            carouselContainer.style.setProperty('--carousel-width', config.width);
-            carouselContainer.style.setProperty('--carousel-height', config.height);
-            carouselContainer.style.setProperty('--transition-speed', config.transitionSpeed);
-            carouselContainer.style.setProperty('--button-bg', config.buttonBg);
-            carouselContainer.style.setProperty('--button-color', config.buttonColor);
+            carouselContainer.style.setProperty('--spiddyyy-carousel-width', config.width);
+            carouselContainer.style.setProperty('--spiddyyy-carousel-height', config.height);
+            carouselContainer.style.setProperty('--spiddyyy-transition-speed', config.transitionSpeed);
+            carouselContainer.style.setProperty('--spiddyyy-button-bg', config.buttonBg);
+            carouselContainer.style.setProperty('--spiddyyy-button-color', config.buttonColor);
 
-            const carousel = document.querySelector('.carousel');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
+            const carousel = document.querySelector('.spiddyyy-carousel');
+            const prevButton = document.querySelector('.spiddyyy-prev');
+            const nextButton = document.querySelector('.spiddyyy-next');
             let currentIndex = config.slides.length;
             let autoPlayInterval;
 
@@ -37,7 +37,7 @@
             // Create original slides
             originalSlides.forEach(slide => {
                 const slideElement = document.createElement('div');
-                slideElement.classList.add('slide');
+                slideElement.classList.add('spiddyyy-slide');
                 slideElement.innerHTML = slide.content;
                 carousel.appendChild(slideElement);
             });
@@ -45,19 +45,19 @@
             // Clone slides for infinite loop
             originalSlides.forEach(slide => {
                 const cloneFirst = document.createElement('div');
-                cloneFirst.classList.add('slide');
+                cloneFirst.classList.add('spiddyyy-slide');
                 cloneFirst.innerHTML = slide.content;
                 carousel.appendChild(cloneFirst);
             });
 
             originalSlides.slice().reverse().forEach(slide => {
                 const cloneLast = document.createElement('div');
-                cloneLast.classList.add('slide');
+                cloneLast.classList.add('spiddyyy-slide');
                 cloneLast.innerHTML = slide.content;
                 carousel.insertBefore(cloneLast, carousel.firstChild);
             });
 
-            const allSlides = document.querySelectorAll('.carousel .slide');
+            const allSlides = document.querySelectorAll('.spiddyyy-carousel .spiddyyy-slide');
             const totalSlides = originalSlides.length;
             const slideWidth = parseFloat(config.width);
 
