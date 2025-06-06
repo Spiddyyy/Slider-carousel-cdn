@@ -1,103 +1,122 @@
-if (!window.carouselConfig) {
-    console.error('carouselConfig not defined. Please define carouselConfig before including this script.');
-    window.carouselConfig = {
-        width: '600px',
-        height: '400px',
-        autoplayInterval: 2000,
-        transitionSpeed: '0.5s',
-        buttonBg: 'rgba(0, 0, 0, 0.5)',
-        buttonColor: 'white',
-        images: []
-    };
-}
+ document.addEventListener('DOMContentLoaded', () => {
+            // Set default configuration if carouselConfig is not defined
+            if (!window.carouselConfig) {
+                console.warn('carouselConfig not defined. Using default configuration.');
+                window.carouselConfig = {
+                    width: '600px',
+                    height: '400px',
+                    autoplayInterval: 2000,
+                    transitionSpeed: '0.5s',
+                    buttonBg: 'rgba(0, 0, 0, 0.5)',
+                    buttonColor: 'white',
+                    slides: []
+                };
+            }
 
-const carouselContainer = document.querySelector('.carousel-container');
-carouselContainer.style.setProperty('--carousel-width', carouselConfig.width);
-carouselContainer.style.setProperty('--carousel-height', carouselConfig.height);
-carouselContainer.style.setProperty('--transition-speed', carouselConfig.transitionSpeed);
-carouselContainer.style.setProperty('--button-bg', carouselConfig.buttonBg);
-carouselContainer.style.setProperty('--button-color', carouselConfig.buttonColor);
+            const config = window.carouselConfig;
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (!carouselContainer) {
+                console.error('Carousel container not found.');
+                return;
+            }
 
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-let currentIndex = carouselConfig.images.length;
-let autoPlayInterval;
+            carouselContainer.style.setProperty('--carousel-width', config.width);
+            carouselContainer.style.setProperty('--carousel-height', config.height);
+            carouselContainer.style.setProperty('--transition-speed', config.transitionSpeed);
+            carouselContainer.style.setProperty('--button-bg', config.buttonBg);
+            carouselContainer.style.setProperty('--button-color', config.buttonColor);
 
-const originalImages = carouselConfig.images;
-originalImages.forEach(img => {
-    const imgElement = document.createElement('img');
-    imgElement.src = img.src;
-    imgElement.alt = img.alt;
-    carousel.appendChild(imgElement);
-});
-originalImages.forEach(img => {
-    const cloneFirst = document.createElement('img');
-    cloneFirst.src = img.src;
-    cloneFirst.alt = img.alt;
-    carousel.appendChild(cloneFirst);
-});
-originalImages.slice().reverse().forEach(img => {
-    const cloneLast = document.createElement('img');
-    cloneLast.src = img.src;
-    cloneLast.alt = img.alt;
-    carousel.insertBefore(cloneLast, carousel.firstChild);
-});
+            const carousel = document.querySelector('.carousel');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            let currentIndex = config.slides.length;
+            let autoPlayInterval;
 
-const allImages = document.querySelectorAll('.carousel img');
-const totalImages = originalImages.length;
-const slideWidth = parseFloat(carouselConfig.width);
+            const originalSlides = config.slides;
 
-function showSlide(index, useTransition = true) {
-    currentIndex = index;
-    if (currentIndex >= allImages.length) {
-        currentIndex = (currentIndex % totalImages + totalImages) % totalImages + totalImages;
-    } else if (currentIndex < 0) {
-        currentIndex = (currentIndex % totalImages + totalImages) % totalImages + totalImages;
-    }
-    carousel.style.transition = useTransition ? `transform ${carouselConfig.transitionSpeed} ease-in-out` : 'none';
-    carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
+            // Create original slides
+            originalSlides.forEach(slide => {
+                const slideElement = document.createElement('div');
+                slideElement.classList.add('slide');
+                slideElement.innerHTML = slide.content;
+                carousel.appendChild(slideElement);
+            });
 
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
+            // Clone slides for infinite loop
+            originalSlides.forEach(slide => {
+                const cloneFirst = document.createElement('div');
+                cloneFirst.classList.add('slide');
+                cloneFirst.innerHTML = slide.content;
+                carousel.appendChild(cloneFirst);
+            });
 
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
+            originalSlides.slice().reverse().forEach(slide => {
+                const cloneLast = document.createElement('div');
+                cloneLast.classList.add('slide');
+                cloneLast.innerHTML = slide.content;
+                carousel.insertBefore(cloneLast, carousel.firstChild);
+            });
 
-function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, carouselConfig.autoplayInterval);
-}
+            const allSlides = document.querySelectorAll('.carousel .slide');
+            const totalSlides = originalSlides.length;
+            const slideWidth = parseFloat(config.width);
 
-function stopAutoPlay() {
-    clearInterval(autoPlayInterval);
-}
+            function showSlide(index, useTransition = true) {
+                currentIndex = index;
+                if (currentIndex >= allSlides.length) {
+                    currentIndex = (currentIndex % totalSlides + totalSlides) % totalSlides + totalSlides;
+                } else if (currentIndex < 0) {
+                    currentIndex = (currentIndex % totalSlides + totalSlides) % totalSlides + totalSlides;
+                }
+                carousel.style.transition = useTransition ? `transform ${config.transitionSpeed} ease-in-out` : 'none';
+                carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
 
-showSlide(currentIndex, false);
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
 
-nextButton.addEventListener('click', () => {
-    stopAutoPlay();
-    nextSlide();
-    startAutoPlay();
-});
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
 
-prevButton.addEventListener('click', () => {
-    stopAutoPlay();
-    prevSlide();
-    startAutoPlay();
-});
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, config.autoplayInterval);
+            }
 
-carousel.addEventListener('transitionend', () => {
-    if (currentIndex >= allImages.length - totalImages) {
-        showSlide(currentIndex % totalImages + totalImages, false);
-    } else if (currentIndex < totalImages) {
-        showSlide(currentIndex + totalImages, false);
-    }
-});
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
 
-carousel.addEventListener('mouseenter', stopAutoPlay);
-carousel.addEventListener('mouseleave', startAutoPlay);
+            // Only initialize if there are slides
+            if (totalSlides > 0) {
+                showSlide(currentIndex, false);
 
-startAutoPlay();
+                nextButton.addEventListener('click', () => {
+                    stopAutoPlay();
+                    nextSlide();
+                    startAutoPlay();
+                });
+
+                prevButton.addEventListener('click', () => {
+                    stopAutoPlay();
+                    prevSlide();
+                    startAutoPlay();
+                });
+
+                carousel.addEventListener('transitionend', () => {
+                    if (currentIndex >= allSlides.length - totalSlides) {
+                        showSlide(currentIndex % totalSlides + totalSlides, false);
+                    } else if (currentIndex < totalSlides) {
+                        showSlide(currentIndex + totalSlides, false);
+                    }
+                });
+
+                carousel.addEventListener('mouseenter', stopAutoPlay);
+                carousel.addEventListener('mouseleave', startAutoPlay);
+
+                startAutoPlay();
+            } else {
+                console.warn('No slides defined in carouselConfig.');
+            }
+        });
