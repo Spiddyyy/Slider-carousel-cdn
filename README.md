@@ -28,10 +28,10 @@ This repository provides a lightweight, customizable, and continuous-loop image 
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Slider Carousel</title>
        <!-- CDN CSS -->
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/carousel.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.css">
    </head>
    <body>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.css">
+   
     <div class="spiddyyy-carousel-container">
     <div class="spiddyyy-carousel" id="spiddyyy-carousel"></div>
     <button class="spiddyyy-nav-button spiddyyy-prev">❮</button>
