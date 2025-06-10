@@ -1,12 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiddyyy Carousel - Demo & Instructions</title>
+    <title>Spiddyyy Carousel - Lightweight & Responsive Slider</title>
+    <meta name="description" content="Spiddyyy Carousel is a lightweight, responsive, and customizable slider for websites. Supports HTML slides, image navigation, infinite loop, and lazy loading.">
+    <meta name="keywords" content="carousel, slider, responsive carousel, JavaScript carousel, Spiddyyy Carousel, web slider, HTML carousel, lazy loading">
+    <meta name="author" content="Spiddyyy">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Spiddyyy Carousel - Lightweight & Responsive Slider">
+    <meta property="og:description" content="A fast, customizable carousel for modern websites with HTML slides, image-based navigation, and infinite looping.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spiddyyy.github.io/Slider-carousel-cdn/">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Spiddyyy+Carousel">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spiddyyy Carousel - Lightweight & Responsive Slider">
+    <meta name="twitter:description" content="A fast, customizable carousel for modern websites with HTML slides, image-based navigation, and infinite looping.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=Spiddyyy+Carousel">
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.css" as="style">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.css">
     <style>
         pre {
             background: #f7fafc;
@@ -33,22 +49,23 @@
 <body class="bg-gray-100 font-sans">
     <header class="bg-blue-600 text-white py-6 text-center">
         <h1 class="text-4xl font-bold">Spiddyyy Carousel</h1>
-        <p class="mt-2 text-lg">A lightweight, responsive, and customizable carousel for your website</p>
+        <p class="mt-2 text-lg">A lightweight, responsive, and customizable slider for modern websites</p>
     </header>
 
     <main class="max-w-5xl mx-auto py-8 px-4">
         <!-- Demo Section -->
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Demo</h2>
+            <h2 class="text-2xl font-semibold mb-4">Spiddyyy Carousel Demo</h2>
+            <p class="mb-4">Experience the Spiddyyy Carousel with responsive design, custom HTML slides, and image-based navigation.</p>
             <div class="spiddyyy-carousel-container">
                 <div class="spiddyyy-carousel" id="spiddyyy-carousel">
                     <div class="spiddyyy-slide-content">
-                        <img src="https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1" alt="Image 1" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+                        <img src="https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1" alt="Sample Image Slide" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
                     </div>
                     <div class="spiddyyy-slide-content">
                         <div class="spiddyyy-custom-content user-slide">
-                            <h2 class="text-3xl font-bold">Slide 2</h2>
-                            <p class="text-lg">Custom HTML slide with user-defined styles.</p>
+                            <h2 class="text-3xl font-bold">Custom Slide</h2>
+                            <p class="text-lg">Create unique HTML slides with your own styles.</p>
                         </div>
                     </div>
                     <div class="spiddyyy-slide-content">
@@ -62,53 +79,53 @@
                         </div>
                     </div>
                 </div>
-                <button class="spiddyyy-nav-button spiddyyy-prev"><img src="https://via.placeholder.com/24x24?text=Prev" alt="Previous" loading="lazy"></button>
-                <button class="spiddyyy-nav-button spiddyyy-next"><img src="https://via.placeholder.com/24x24?text=Next" alt="Next" loading="lazy"></button>
+                <button class="spiddyyy-nav-button spiddyyy-prev"><img src="https://via.placeholder.com/24x24?text=Prev" alt="Previous Slide" loading="lazy"></button>
+                <button class="spiddyyy-nav-button spiddyyy-next"><img src="https://via.placeholder.com/24x24?text=Next" alt="Next Slide" loading="lazy"></button>
             </div>
         </section>
 
         <!-- Instructions Section -->
         <section class="mb-12">
             <h2 class="text-2xl font-semibold mb-4">How to Use Spiddyyy Carousel</h2>
-            <p class="mb-4">Follow these steps to add the Spiddyyy Carousel to your website. It's lightweight, responsive, and supports custom HTML slides and image-based navigation.</p>
+            <p class="mb-4">Integrate the Spiddyyy Carousel into your website in four simple steps. It's optimized for performance with lazy loading and minified assets.</p>
 
             <h3 class="text-xl font-medium mb-2">1. Include the CSS</h3>
             <p class="mb-2">Add the minified CSS from the Spiddyyy CDN in your `<head>`.</p>
-            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.css"&gt;</code></pre>
-            <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<link rel="stylesheet" href=\"https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.css\">')">Copy</button>
+            <pre><code><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.css"></code></pre>
+            <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.css\">')">Copy</button>
 
             <h3 class="text-xl font-medium mb-2 mt-6">2. Add the Carousel HTML</h3>
             <p class="mb-2">Place the carousel container in your `<body>`. Add slides as `<div class="spiddyyy-slide-content">` elements.</p>
-            <pre><code>&lt;div class="spiddyyy-carousel-container"&gt;
-    &lt;div class="spiddyyy-carousel" id="spiddyyy-carousel"&gt;
-        &lt;div class="spiddyyy-slide-content"&gt;
-            &lt;img src="your-image.jpg" alt="Image 1" style="width:100%;height:100%;object-fit:cover;" loading="lazy"&gt;
-        &lt;/div&gt;
-        &lt;div class="spiddyyy-slide-content"&gt;
-            &lt;div class="spiddyyy-custom-content user-slide"&gt;
-                &lt;h2&gt;Custom Slide&lt;/h2&gt;
-                &lt;p&gt;Add your HTML content here.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="spiddyyy-slide-content"&gt;
-            &lt;div class="banner-wrapper" style="background: url(your-banner.jpg) no-repeat center center/cover;"&gt;
-                &lt;div class="fluid-container"&gt;
-                    &lt;div class="banner-inner-wrapper"&gt;
-                        &lt;h2&gt;Your Title&lt;/h2&gt;
-                        &lt;h3&gt;&lt;i&gt;Your Subtitle&lt;/i&gt;&lt;/h3&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;button class="spiddyyy-nav-button spiddyyy-prev"&gt;&lt;img src="images/prev.webp" alt="Previous" loading="lazy"&gt;&lt;/button&gt;
-    &lt;button class="spiddyyy-nav-button spiddyyy-next"&gt;&lt;img src="images/next.webp" alt="Next" loading="lazy"&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-            <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<div class=\"spiddyyy-carousel-container\">\n    <div class=\"spiddyyy-carousel\" id=\"spiddyyy-carousel\">\n        <div class=\"spiddyyy-slide-content\">\n            <img src=\"your-image.jpg\" alt=\"Image 1\" style=\"width:100%;height:100%;object-fit:cover;\" loading=\"lazy\">\n        </div>\n        <div class=\"spiddyyy-slide-content\">\n            <div class=\"spiddyyy-custom-content user-slide\">\n                <h2>Custom Slide</h2>\n                <p>Add your HTML content here.</p>\n            </div>\n        </div>\n        <div class=\"spiddyyy-slide-content\">\n            <div class=\"banner-wrapper\" style=\"background: url(your-banner.jpg) no-repeat center center/cover;\">\n                <div class=\"fluid-container\">\n                    <div class=\"banner-inner-wrapper\">\n                        <h2>Your Title</h2>\n                        <h3><i>Your Subtitle</i></h3>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <button class=\"spiddyyy-nav-button spiddyyy-prev\"><img src=\"images/prev.webp\" alt=\"Previous\" loading=\"lazy\"></button>\n    <button class=\"spiddyyy-nav-button spiddyyy-next\"><img src=\"images/next.webp\" alt=\"Next\" loading=\"lazy\"></button>\n</div>')">Copy</button>
+            <pre><code><div class="spiddyyy-carousel-container">
+    <div class="spiddyyy-carousel" id="spiddyyy-carousel">
+        <div class="spiddyyy-slide-content">
+            <img src="your-image.jpg" alt="Image 1" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+        </div>
+        <div class="spiddyyy-slide-content">
+            <div class="spiddyyy-custom-content user-slide">
+                <h2>Custom Slide</h2>
+                <p>Add your HTML content here.</p>
+            </div>
+        </div>
+        <div class="spiddyyy-slide-content">
+            <div class="banner-wrapper" style="background: url(your-banner.jpg) no-repeat center center/cover;">
+                <div class="fluid-container">
+                    <div class="banner-inner-wrapper">
+                        <h2>Your Title</h2>
+                        <h3><i>Your Subtitle</i></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="spiddyyy-nav-button spiddyyy-prev"><img src="images/prev.webp" alt="Previous" loading="lazy"></button>
+    <button class="spiddyyy-nav-button spiddyyy-next"><img src="images/next.webp" alt="Next" loading="lazy"></button>
+</div></code></pre>
+            <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<div class=\"spiddyyy-carousel-container\">\n    <div class=\"spiddyyy-carousel\" id=\"spiddyyy-carousel\">\n        <div class=\"spiddyyy-slide-content\">\n            <img src=\"your-image.jpg\" alt=\"Image 1\" style=\"width:100%;height:100%;object-fit:cover;\" loading=\"lazy\">\n        </div>\n        <div class=\"spiddyyy-slide-content\">\n            <div class=\"spiddyyy-custom-content user-slide\">\n                <h2>Custom Slide</h2>\n                <p>Add your HTML content here.</p>\n            </div>\n        </div>\n        <div class=\"spiddyyy-slide-content\">\n            <div class=\"banner-wrapper\" style=\"background: url(your-background-image.jpg) no-repeat center center/cover;\"></div>\n                <div class=\"fluid-container\">\n                    <div class=\"banner-inner-wrapper\">\n                        <h2>Your Title</h2>\n                        <h3><i>Your Subtitle</i></h3>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <button class=\"spiddyyy-nav-button spiddyyy-prev\"><img src=\"images/prev.webp\" alt=\"Previous\" loading=\"lazy\"></button>\n    <button class=\"spiddyyy-nav-button spiddyyy-next\"><img src=\"images/next.webp\" alt=\"Next\" loading=\"lazy\"></button>\n</div>')">Copy</button>
 
             <h3 class="text-xl font-medium mb-2 mt-6">3. Configure the Carousel</h3>
             <p class="mb-2">Add a `<script>` before the carousel JS to define `carouselConfig`. Customize width, height, autoplay, and navigation.</p>
-            <pre><code>&lt;script&gt;
+            <pre><code><script>
     const carouselConfig = {
         width: '100%',
         height: '400px',
@@ -117,23 +134,23 @@
         buttonBg: 'rgba(0, 0, 0, 0.5)',
         buttonColor: 'white',
         showNavButtons: true,
-        prevButtonContent: '&lt;img src="images/prev.webp" alt="Previous" loading="lazy"&gt;',
-        nextButtonContent: '&lt;img src="images/next.webp" alt="Next" loading="lazy"&gt;',
+        prevButtonContent: '<img src="images/prev.webp" alt="Previous" loading="lazy">',
+        nextButtonContent: '<img src="images/next.webp" alt="Next" loading="lazy">',
         autoplay: true
     };
-&lt;/script&gt;</code></pre>
+</script></code></pre>
             <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<script>\n    const carouselConfig = {\n        width: \'100%\',\n        height: \'400px\',\n        autoplayInterval: 2000,\n        transitionSpeed: \'0.5s\',\n        buttonBg: \'rgba(0, 0, 0, 0.5)\',\n        buttonColor: \'white\',\n        showNavButtons: true,\n        prevButtonContent: \'<img src=\"images/prev.webp\" alt=\"Previous\" loading=\"lazy\">\',\n        nextButtonContent: \'<img src=\"images/next.webp\" alt=\"Next\" loading=\"lazy\">\',\n        autoplay: true\n    };\n</script>')">Copy</button>
 
             <h3 class="text-xl font-medium mb-2 mt-6">4. Include the JavaScript</h3>
             <p class="mb-2">Add the minified JavaScript from the Spiddyyy CDN after your `carouselConfig`.</p>
-            <pre><code>&lt;script defer src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"&gt;&lt;/script&gt;</code></pre>
-            <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<script defer src=\"https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js\"></script>')">Copy</button>
+            <pre><code><script defer src="https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.js"></script></code></pre>
+            <button class="copy-button mt-2" onclick="navigator.clipboard.writeText('<script defer src=\"https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.js\"></script>')">Copy</button>
         </section>
 
         <!-- Configuration Options -->
         <section class="mb-12">
             <h2 class="text-2xl font-semibold mb-4">Configuration Options</h2>
-            <p class="mb-4">Customize the carousel behavior using the `carouselConfig` object.</p>
+            <p class="mb-4">Customize the Spiddyyy Carousel with these `carouselConfig` properties.</p>
             <table class="w-full border-collapse border border-gray-300">
                 <thead>
                     <tr class="bg-gray-200">
@@ -180,13 +197,13 @@
                     </tr>
                     <tr>
                         <td class="border border-gray-300 p-2">prevButtonContent</td>
-                        <td class="border border-gray-300 p-2">HTML content for previous button</td>
-                        <td class="border border-gray-300 p-2">&lt;img src="..." alt="Previous" loading="lazy"&gt;</td>
+                        <td class="border border-gray-300 p-2">HTML content for previous button (e.g., image)</td>
+                        <td class="border border-gray-300 p-2"><img src="..." alt="Previous" loading="lazy"></td>
                     </tr>
                     <tr>
                         <td class="border border-gray-300 p-2">nextButtonContent</td>
-                        <td class="border border-gray-300 p-2">HTML content for next button</td>
-                        <td class="border border-gray-300 p-2">&lt;img src="..." alt="Next" loading="lazy"&gt;</td>
+                        <td class="border border-gray-300 p-2">HTML content for next button (e.g., image)</td>
+                        <td class="border border-gray-300 p-2"><img src="..." alt="Next" loading="lazy"></td>
                     </tr>
                     <tr>
                         <td class="border border-gray-300 p-2">autoplay</td>
@@ -200,17 +217,19 @@
         <!-- Performance Tips -->
         <section>
             <h2 class="text-2xl font-semibold mb-4">Performance Tips</h2>
+            <p class="mb-4">Optimize your website when using Spiddyyy Carousel:</p>
             <ul class="list-disc pl-6 mb-4">
-                <li>Use modern image formats (e.g., WebP) and <code>srcset</code> for responsive images.</li>
-                <li>Ensure your images are optimized and include <code>loading="lazy"</code>.</li>
-                <li>Preload the carousel CSS if it's above the fold: <code>&lt;link rel="preload" href="..." as="style"&gt;</code>.</li>
+                <li>Use WebP images and <code>srcset</code> for responsive image loading.</li>
+                <li>Ensure images include <code>loading="lazy"</code> to defer offscreen loading.</li>
+                <li>Preload the carousel CSS for above-the-fold carousels: <code>&lt;link rel="preload" href="..." as="style"&gt;</code>.</li>
                 <li>Sanitize dynamic HTML in slides or button content to prevent XSS (e.g., using DOMPurify).</li>
+                <li>Minify your <code>carouselConfig</code> script in production.</li>
             </ul>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Spiddyyy. Hosted on <a href="https://github.com/Spiddyyy/Slider-carousel-cdn" class="underline">GitHub</a>.</p>
+        <p>© 2025 Spiddyyy. Hosted on <a href="https://github.com/spiddyyy/Slider-carousel-cdn" class="underline">GitHub</a>. <a href="https://github.com/spiddyyy/Slider-carousel-cdn/issues" class="underline">Report Issues</a>.</p>
     </footer>
 
     <script>
@@ -223,11 +242,11 @@
             buttonBg: 'rgba(0, 0, 0, 0.5)',
             buttonColor: 'white',
             showNavButtons: true,
-            prevButtonContent: '<img src="https://via.placeholder.com/24x24?text=Prev" alt="Previous" loading="lazy">',
-            nextButtonContent: '<img src="https://via.placeholder.com/24x24?text=Next" alt="Next" loading="lazy">',
+            prevButtonContent: '<img src="https://via.placeholder.com/24x24?text=Prev" alt="Previous Slide" loading="lazy">',
+            nextButtonContent: '<img src="https://via.placeholder.com/24x24?text=Next" alt="Next Slide" loading="lazy">',
             autoplay: true
         };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/spiddyyy/Slider-carousel-cdn@latest/cdn/spiddyyy-carousel.min.js"></script>
 </body>
 </html>
