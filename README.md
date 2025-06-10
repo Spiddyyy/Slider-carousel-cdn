@@ -55,18 +55,18 @@ This repository provides a lightweight, customizable, and continuous-loop image 
         <button class="spiddyyy-nav-button spiddyyy-next">❯</button>
     </div>
    <script>
-    const carouselConfig = {
-        width: '600px',
-        height: '400px',
-        autoplayInterval: 2000,
-        transitionSpeed: '0.5s',
-        buttonBg: 'rgba(0, 0, 0, 0.5)',
-        buttonColor: 'white',
-        slides: [
-            { content: '<img src="https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1" alt="Image 1" style="width:100%;height:100%;object-fit:cover;">' },
-            { content: '<div class="spiddyyy-custom-content my-custom-class"><h2>Custom Slide</h2><p>User-styled content.</p></div>' }
-        ]
-    };
+     const carouselConfig = {
+            width: '100%',
+            height: '400px',
+            autoplayInterval: 2000,
+            transitionSpeed: '0.5s',
+            buttonBg: 'rgba(0, 0, 0, 0.5)',
+            buttonColor: 'white',
+            showNavButtons: true,
+            prevButtonContent: '❮',
+            nextButtonContent: '❯',
+            autoplay: true
+        };
       </script>
     <script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"></script>
    </body>
