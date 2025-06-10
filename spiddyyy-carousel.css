@@ -6,7 +6,7 @@
 
         .spiddyyy-carousel-container {
             width: var(--spiddyyy-carousel-width, 600px);
-            margin: 50px auto;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
         }
@@ -55,6 +55,20 @@
             padding: 10px;
             cursor: pointer;
             font-size: 18px;
+            width: 40px;
+
+
+           
+    /* position: relative; */
+    width: 100%;
+    max-width: 45px;
+    height: 45px;
+    background: linear-gradient(to right, #FFD744 0% ,#C59829 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
         }
 
         .spiddyyy-prev {
@@ -64,3 +78,6 @@
         .spiddyyy-next {
             right: 10px;
         }
+
+        /* Hide original slide content before cloning */
+        .spiddyyy-slide-content { display: none; width: 100% !important; max-width: 100%; height: 100% !important; }
