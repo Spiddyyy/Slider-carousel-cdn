@@ -55,18 +55,24 @@ This repository provides a lightweight, customizable, and continuous-loop image 
         <button class="spiddyyy-nav-button spiddyyy-next">❯</button>
     </div>
    <script>
-     const carouselConfig = {
-            width: '100%',
-            height: '400px',
-            autoplayInterval: 2000,
-            transitionSpeed: '0.5s',
-            buttonBg: 'rgba(0, 0, 0, 0.5)',
-            buttonColor: 'white',
-            showNavButtons: true,
-            prevButtonContent: '❮',
-            nextButtonContent: '❯',
-            autoplay: true
-        };
+     const headerHeight = 150;   // chnage however you want 
+   const viewportWidth = window.innerWidth;
+   const viewportHeight = window.innerHeight - headerHeight;
+   
+   window.carouselConfig = {
+       width: '100%', // Use string for % — handled in rendering logic
+       height: `${viewportHeight}px`, // Dynamically calculated height
+       autoplayInterval: 2000,
+       transitionSpeed: '0.5s',
+       buttonBg: 'rgba(0, 0, 0, 0.5)',
+       buttonColor: 'white',
+       showNavButtons: true,
+       prevButtonContent: '',
+       nextButtonContent: '❯',
+       autoplay: true, 
+       header: headerHeight
+   };
+     
       </script>
     <script src="https://cdn.jsdelivr.net/gh/Spiddyyy/Slider-carousel-cdn@latest/spiddyyy-carousel.min.js"></script>
    </body>
