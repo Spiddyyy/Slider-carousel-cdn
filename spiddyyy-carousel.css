@@ -59,15 +59,7 @@
 
 
            
-    /* position: relative; */
-    width: 100%;
-    max-width: 45px;
-    height: 45px;
-    background: linear-gradient(to right, #FFD744 0% ,#C59829 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+ 
 
         }
 
